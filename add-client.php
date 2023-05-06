@@ -63,6 +63,15 @@
             <div class="col-md-6">
               <div class="mb-3">
                 <label for="contact" class="form-label">Fee paid</label>
+                <input type="text" class="form-control" id="fee" name="fee">
+              </div>
+            </div>
+          </div>
+
+          <div class="row">
+            <div class="col-md-6">
+              <div class="mb-3">
+                <label for="mnum" class="form-label">Contact</label>
                 <input type="text" class="form-control" id="contact" name="contact">
               </div>
             </div>
@@ -74,12 +83,12 @@
                 <legend>Package</legend>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="package" id="gymPackage" value="G" />
+                  <input class="form-check-input" type="checkbox" name="package[]" id="gymPackage" value="G" />
                   <label class="form-check-label" for="gymPackage">Gym</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="package" id="cardioPackage" value="C" />
+                  <input class="form-check-input" type="checkbox" name="package[]" id="cardioPackage" value="C" />
                   <label class="form-check-label" for="cardioPackage">Cardio</label>
                 </div>
               </fieldset>
@@ -90,17 +99,17 @@
                 <legend>Goal</legend>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="goal" id="muscleGain" value="MG" />
+                  <input class="form-check-input" type="checkbox" name="goal[]" id="muscleGain" value="MG" />
                   <label class="form-check-label" for="muscleGain">Muscle Gain</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="goal" id="fatLoss" value="FL" />
+                  <input class="form-check-input" type="checkbox" name="goal[]" id="fatLoss" value="FL" />
                   <label class="form-check-label" for="fatLoss">Fat Loss</label>
                 </div>
 
                 <div class="form-check form-check-inline">
-                  <input class="form-check-input" type="radio" name="goal" id="generalFitness" value="GF" />
+                  <input class="form-check-input" type="checkbox" name="goal[]" id="generalFitness" value="GF" />
                   <label class="form-check-label" for="generalFitness">General Fitness</label>
                 </div>
               </fieldset>

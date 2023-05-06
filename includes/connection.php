@@ -7,7 +7,7 @@ $db="thephysiquegym";
 
 $conn = mysqli_connect($host,$username,$password,$db);
 
-// SQL query to create the clients table
+/*/ SQL query to create the clients table
 $sql = "CREATE TABLE IF NOT EXISTS clients (
     id INT PRIMARY KEY AUTO_INCREMENT,
     membership_number VARCHAR(255) NOT NULL,
@@ -29,6 +29,7 @@ $sql = "CREATE TABLE IF NOT EXISTS clients (
   } else {
     echo "Error creating table: " . mysqli_error($conn);
   }
+  */
   
 
 ?>
