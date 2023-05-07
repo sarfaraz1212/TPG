@@ -30,5 +30,38 @@ $(document).ready(function() {
             }
         });
     });
+
+    $('#updateclientform').on('submit',function(e)
+    {
+        e.preventDefault();
+        var formdata = new FormData(this);
+        $.ajax({
+            url: 'includes/logic.php',
+            method: 'POST',
+            data: formdata,
+            processData: false,
+            contentType: false,
+            success: function(feedback) {
+                var feedback = JSON.parse(feedback);
+                if(feedback.status = "success") {
+                    Swal.fire({
+                        title: 'Success!',
+                        text: 'Client updated successfully!',
+                        icon: 'success',
+                        confirmButtonText: 'OK'
+                    }).then(function() {
+                        location.reload();
+                    });
+                } else {
+                    Swal.fire({
+                        title: 'Error!',
+                        text: 'Client updation failed!',
+                        icon: 'error',
+                        confirmButtonText: 'OK'
+                    });
+                }
+            }
+        });
+    })
 });
 
