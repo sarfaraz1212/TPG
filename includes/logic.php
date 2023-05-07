@@ -18,7 +18,7 @@ if(isset($_POST['mnum']))
     $package = implode(",", $packag);
     
     $goa = $_POST['goal'];
-    $goal = implode(" | ", $goa);
+    $goal = implode(",", $goa);
 
 
     $sql = "INSERT INTO `clients`(`membership_number`, `name`, `email`, `contact`, `start_date`, `end_date`, `body_weight`, `height`, `fee`, `package_type`, `goal`, `gender`, `added_on`) 
@@ -42,4 +42,20 @@ else
 {
     echo "Error: Invalid request.";
 }
+?>
+
+<?php
+if(isset($_POST['editid']))
+{
+    $editid = $_POST['editid'];
+    echo $editid; 
+}
+
+if(isset($_POST['deleteid']))
+{
+    $deleteid = $_POST['deleteid'];
+    echo $deleteid; 
+}
+
+
 ?>
