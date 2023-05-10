@@ -80,12 +80,19 @@
         </div>
       </div>
       <div class="col-4">
-        <div class="card overflow-hidden">
+        <a href="view-expired.php"><div class="card overflow-hidden">
+                    <?php
+                      $sql  = "SELECT * FROM clients WHERE end_date < CURDATE()";
+                      $sqlq =  mysqli_query($conn,$sql);
+                      $rows = mysqli_num_rows($sqlq);
+
+
+                    ?>
                       <div class="card-body p-4">
-                        <h5 class="card-title mb-9 fw-semibold">Total users</h5>
+                        <h5 class="card-title mb-9 fw-semibold">Memberships Expired</h5>
                         <div class="row align-items-center">
                           <div class="col-8">
-                            <h4 class="fw-semibold mb-3"><?=$sqlqr?></h4>
+                            <h4 class="fw-semibold mb-3"><?=$rows?></h4>
                             <div class="d-flex align-items-center mb-3">
                               <span
                                 class="me-1 rounded-circle bg-light-success round-20 d-flex align-items-center justify-content-center">
